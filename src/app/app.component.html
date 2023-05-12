@@ -3,12 +3,14 @@
 <!--app-botones></app-botones> -->
 <!--app-botonimagen></app-botonimagen> -->
 <div class="container">
-  <h1>{{ title }}</h1>
+  <!--h1>{{ title }}</h1> -->
   <!--app-formulario></app-formulario> -->
   <!--app-bucles></app-bucles> -->
   <!--app-switch></app-switch> -->
   <!-- app-formulario2></app-formulario2> -->
-  <app-formulario3></app-formulario3>
-  <!--input type="text" class="form-control" [(ngModel)]="title">
-  <app-children title="Texto de prueba"></app-children> -->
+  <!-- app-formulario3></app-formulario3> -->
+  <h2>Componente padre</h2>
+  <input type="text" class="form-control mb-4" [(ngModel)]="title">
+  <app-children [title]="title"
+  ></app-children>
 </div>

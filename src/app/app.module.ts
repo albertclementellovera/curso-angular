@@ -12,6 +12,7 @@ import { SwitchComponent } from './switch/switch.component';
 import { Formulario2Component } from './formulario2/formulario2.component';
 import { Formulario3Component } from './formulario3/formulario3.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { ChildrenComponent } from './children/children.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     BuclesComponent,
     SwitchComponent,
     Formulario2Component,
-    Formulario3Component
+    Formulario3Component,
+    ChildrenComponent
   ],
   imports: [
     BrowserModule,
