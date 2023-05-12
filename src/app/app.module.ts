@@ -9,7 +9,9 @@ import { BotonimagenComponent } from './botonimagen/botonimagen.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
-import { FormsModule } from '@angular/forms';
+import { Formulario2Component } from './formulario2/formulario2.component';
+import { Formulario3Component } from './formulario3/formulario3.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,12 +22,15 @@ import { FormsModule } from '@angular/forms';
     BotonimagenComponent,
     FormularioComponent,
     BuclesComponent,
-    SwitchComponent
+    SwitchComponent,
+    Formulario2Component,
+    Formulario3Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
