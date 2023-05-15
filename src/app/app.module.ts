@@ -15,8 +15,27 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ChildrenComponent } from './children/children.component';
 import { AddMessagesComponent } from './add-messages/add-messages.component';
 import { ListMessagesComponent } from './list-messages/list-messages.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { CoursesComponent } from './courses/courses.component';
+import { CoursesDetailComponent } from './courses-detail/courses-detail.component';
+import { ContactInfoComponent } from './contact/contact-info/contact-info.component';
+import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 
-
+const routes: Routes = [
+  {path: 'home', component: HomeComponent},
+  {path: 'contact', component: ContactComponent,
+    children:[
+     {path: '',component: ContactInfoComponent},
+     {path: 'details', component: ContactDetailComponent}
+    ]
+  },
+  {path: 'about', component: AboutComponent},
+  {path: 'courses', component: CoursesComponent},
+  {path: 'courses/:course/:id', component: CoursesDetailComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,13 +49,16 @@ import { ListMessagesComponent } from './list-messages/list-messages.component';
     Formulario3Component,
     ChildrenComponent,
     AddMessagesComponent,
-    ListMessagesComponent
+    ListMessagesComponent,
+    CoursesComponent,
+    CoursesDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

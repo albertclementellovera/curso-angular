@@ -2,9 +2,9 @@
 <!--app-contador></app-contador>-->
 <!--app-botones></app-botones> -->
 <!--app-botonimagen></app-botonimagen> -->
-<div class="container">
+<!--div class="container"> -->
   <!--h1>{{ title }}</h1> -->
-  <h1>Servicios</h1>
+  <!-- h1>Servicios</h1>
   <!--app-formulario></app-formulario> -->
   <!--app-bucles></app-bucles> -->
   <!--app-switch></app-switch> -->
@@ -14,7 +14,27 @@
   <!-- input type="text" class="form-control mb-4" [(ngModel)]="title">
   <app-children [title]="title"
   ></app-children> -->
-  <app-add-messages></app-add-messages>
-  <app-list-messages></app-list-messages>
+  <!-- app-add-messages></app-add-messages>
+  <app-list-messages></app-list-messages> -->
+<!-- /div>-->
 
+<div class="container">
+  <h1>Tema: Enrutamiento</h1>
+
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="home" routerLinkActive="active">home</a>
+      </li>
+      <li>
+        <a routerLink="contact" routerLinkActive="active">contact</a>
+      </li>
+      <li>
+        <a routerLink="about" routerLinkActive="active">Acerca de</a>
+      </li>
+    </ul>
+  </nav>
+   <router-outlet></router-outlet>
 </div>
+
+
